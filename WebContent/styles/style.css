@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  min-height: 20vh;
+  background-color: #80c058;
+  display: flex;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header div.logo {
+  display: flex;
+  flex: 1 1 220px;
+  align-items: center;
+  justify-content: center;
+}
+header div.logo img {
+  width: 6vw;
+  height: 6vw;
+  margin: 0px 10px;
+}
+header div.logo h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+header div.search {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1 1 230px;
+  margin-bottom: 30px;
+}
+header div.search form label {
+  font-size: 1rem;
+  color: white;
+}
+header div.search form input[type=search] {
+  margin: 0px 2.5px;
+  font-size: 0.8rem;
+}
+header div.search form button {
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+header div.search form button img {
+  height: 1.6vw;
+  width: 1.6vw;
+}
+header nav {
+  min-height: 70%;
+  margin-bottom: 15px;
+  display: flex;
+  flex: 1 1 250px;
+  justify-content: center;
+}
+header nav ul {
+  width: 90%;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+header nav ul li a:hover {
+  text-shadow: 0px 0px 3px white;
+}
+
+main {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+main table {
+  width: 95%;
+}
+main table tr {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main table tr td {
+  width: 22%;
+  height: 30vw;
+  background-color: #d6f3cc;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main table tr td img {
+  height: 18vw;
+  width: 15vw;
+  border-radius: 20px;
+}
+main table tr td a.attractions {
+  padding: 3px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+main table tr td a.location {
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.action {
+  color: yellow;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 5;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 811px) {
+  header div.logo {
+    flex: 1 1 700px;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  header div.search {
+    flex: 1 1 700px;
+  }
+  header div.search form button img {
+    width: 3vw;
+    height: 3vw;
+  }
+  header nav ul {
+    width: 80%;
+  }
+  main table tr td {
+    width: 22%;
+    height: 35vw;
+  }
+}
+@media screen and (max-width: 415px) {
+  header {
+    height: 25vh;
+  }
+  header div.logo img {
+    margin: 0rem;
+  }
+  header div.search {
+    margin: 0px;
+  }
+  header div.search form button img {
+    width: 6vw;
+    height: 6vw;
+    margin: 0px;
+  }
+  header nav {
+    min-height: 40%;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+  header nav ul li {
+    margin: 2px 60px;
+  }
+  header nav ul li a {
+    font-size: 1rem;
+  }
+  main table tr {
+    justify-content: space-around;
+  }
+  main table tr td {
+    width: 40%;
+    height: 55vw;
+  }
+  main table tr td img {
+    width: 25vw;
+    height: 25vw;
+  }
+  main table tr td a.attractions {
+    font-size: 1.25rem;
+  }
+  main table tr td a.location {
+    font-size: 0.95rem;
+  }
+}/*# sourceMappingURL=style.css.map */

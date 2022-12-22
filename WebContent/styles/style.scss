@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  min-height: 20vh;
+  background-color: #80c058;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  //logo
+  div.logo {
+    display: flex;
+    flex: 1 1 220px;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 6vw;
+      height: 6vw;
+      margin: 0px 10px;
+    }
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+  //景點搜尋
+  div.search {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1 1 230px;
+
+    margin-bottom: 30px;
+    form {
+      label {
+        font-size: 1rem;
+        color: white;
+      }
+      input[type="search"] {
+        margin: 0px 2.5px;
+        font-size: 0.8rem;
+      }
+      button {
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        img {
+          height: 1.6vw;
+          width: 1.6vw;
+        }
+      }
+    }
+  }
+  //navbar
+  nav {
+    min-height: 70%;
+    margin-bottom: 15px;
+    display: flex;
+    flex: 1 1 250px;
+    justify-content: center;
+    ul {
+      width: 90%;
+      list-style-type: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.2rem;
+          &:hover {
+            text-shadow: 0px 0px 3px white;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  //景點
+  table {
+    width: 95%;
+    tr {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      td {
+        width: 22%;
+        height: 30vw;
+        background-color: #d6f3cc;
+        margin: 10px;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 18vw;
+          width: 15vw;
+          border-radius: 20px;
+          // padding-top: 3px;
+        }
+        a.attractions {
+          padding: 3px;
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+        }
+        a.location {
+          text-decoration: none;
+          font-size: 1.25rem;
+          text-align: center;
+          padding: 3px;
+        }
+      }
+    }
+  }
+}
+//目前所在的頁面
+.action {
+  color: yellow;
+}
+//top button
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 5;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 811px) {
+  header {
+    div.logo {
+      flex: 1 1 700px;
+      img {
+        width: 15vw;
+        height: 15vw;
+      }
+    }
+    div.search {
+      flex: 1 1 700px;
+      form {
+        button {
+          img {
+            width: 3vw;
+            height: 3vw;
+          }
+        }
+      }
+    }
+    nav {
+      ul {
+        width: 80%;
+      }
+    }
+  }
+
+  main {
+    table {
+      tr {
+        td {
+          width: 22%;
+          height: 35vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  header {
+    height: 25vh;
+    div.logo {
+      img {
+        margin: 0rem;
+      }
+    }
+    div.search {
+      margin: 0px;
+      form {
+        button {
+          img {
+            width: 6vw;
+            height: 6vw;
+            margin: 0px;
+          }
+        }
+      }
+    }
+    nav {
+      min-height: 40%;
+      ul {
+        justify-content: center;
+        li {
+          margin: 2px 60px;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    table {
+      tr {
+        justify-content: space-around;
+        td {
+          width: 40%;
+          height: 55vw;
+          img {
+            width: 25vw;
+            height: 25vw;
+          }
+          a.attractions {
+            font-size: 1.25rem;
+          }
+          a.location {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}

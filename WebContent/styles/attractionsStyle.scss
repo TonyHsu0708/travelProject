@@ -1,0 +1,592 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  min-height: 20vh;
+  background-color: #80c058;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  //logo
+  div.logo {
+    display: flex;
+    flex: 1 1 220px;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 6vw;
+      height: 6vw;
+      margin: 0px 10px;
+    }
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+  //景點搜尋
+  div.search {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1 1 230px;
+
+    margin-bottom: 30px;
+    form {
+      label {
+        font-size: 1rem;
+        color: white;
+      }
+      input[type="text"] {
+        margin: 0px 2.5px;
+        font-size: 0.8rem;
+      }
+      button {
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        img {
+          height: 1.6vw;
+          width: 1.6vw;
+        }
+      }
+    }
+  }
+  //navbar
+  nav {
+    min-height: 70%;
+    margin-bottom: 15px;
+    display: flex;
+    flex: 1 1 250px;
+    justify-content: center;
+    ul {
+      width: 90%;
+      list-style-type: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.2rem;
+          &:hover {
+            text-shadow: 0px 0px 3px white;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  //景點介紹
+  section.left {
+    display: flex;
+    flex: 3 1 450px;
+    height: 50vw;
+    margin: 20px;
+    background-color: #d6f3cc;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 15px;
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        margin-top: 15px;
+      }
+    }
+    img {
+      width: 30vw;
+      height: 40vw;
+      margin: 66px 15px 0px 5px;
+    }
+  }
+  //景點評論
+  section.right {
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    align-items: center;
+    height: 50vw;
+    margin: 20px 20px 0px 5px;
+    background-color: #d6f3cc;
+    h3 {
+      font-size: 2rem;
+      margin-top: 15px;
+    }
+    //景點評論表頭
+    table.commentAreaHead {
+      border-collapse: collapse;
+      margin-top: 2px;
+      width: 90%;
+      height: 5%;
+      tr {
+        th {
+          border: 1px solid #d6f3cc;
+          border-collapse: collapse;
+          background-color: #9cc4f3;
+          font-weight: 100;
+        }
+      }
+    }
+    //景點評論內容
+    div {
+      width: 90%;
+      height: 50%;
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+        tr {
+          td {
+            border: 1.5px solid #d6f3cc;
+            background-color: white;
+            height: 15vw;
+            font-size: 0.75rem;
+            padding: 15px;
+            button {
+              margin-bottom: 10px;
+              border: none;
+              cursor: pointer;
+              width: 3vw;
+              height: 2vw;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    //新增評論區塊
+    form {
+      height: 35%;
+      width: 90%;
+      margin-top: 2px;
+      h4 {
+        font-size: 0.8rem;
+        font-weight: 100;
+      }
+      textarea {
+        width: 100%;
+        height: 60%;
+        font-size: 0.8rem;
+        //消除邊框,點擊激活邊框,右下角的大小控制圖示
+        border: 0;
+        outline: none;
+        resize: none;
+      }
+      input[type="button"] {
+        width: 3vw;
+        height: 2vw;
+        border-radius: 2px;
+        margin: 5px 5px 0px 0px;
+        color: white;
+        background-color: #5e6eff;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #4f5fea;
+        }
+      }
+      input[type="reset"] {
+        width: 3vw;
+        height: 2vw;
+        border-radius: 2px;
+        margin: 5px 0px 0px 2px;
+        background-color: #d9d9d9;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #cdcccc;
+        }
+      }
+    }
+  }
+  section.bottom {
+    height: 40vw;
+    max-width: 70%;
+    margin: 0px 0px 20px 20px;
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d6f3cc;
+    //文章區
+    div.head {
+      height: 20%;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-size: 2rem;
+      }
+      //文章搜尋
+      form {
+        width: 60%;
+        height: 20%;
+        input[type="number"] {
+          border: 0;
+          outline: none;
+        }
+        input[type="submit"] {
+          height: 2vw;
+          width: 3vw;
+          color: white;
+          background-color: #5e6eff;
+          border: none;
+          cursor: pointer;
+          border-radius: 2px;
+          &:hover {
+            background-color: #4f5fea;
+          }
+        }
+      }
+    }
+    //文章區表頭
+    table.articleAreaHead {
+      width: 96%;
+      border-collapse: collapse;
+      height: 12%;
+      tr {
+        th {
+          border: 2px solid #d6f3cc;
+          border-collapse: collapse;
+          background-color: #9cc4f3;
+          font-weight: 100;
+        }
+      }
+    }
+    //文章區內容
+    div {
+      width: 96%;
+      height: 55%;
+      table {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-collapse: collapse;
+        tr {
+          td {
+            border: 2px solid #d6f3cc;
+            height: 7vw;
+            padding: 20px;
+            a {
+              text-decoration: none;
+              color: black;
+              &:hover {
+                color: blue;
+              }
+            }
+
+            button {
+              border: none;
+              cursor: pointer;
+              width: 3vw;
+              height: 2vw;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    //新增文章按鈕
+    div.addArticle {
+      width: 96%;
+      height: 5vw;
+      button.addArticleButton {
+        margin-top: 10px;
+        padding: 2px;
+        width: 25%;
+        height: 3vw;
+        color: white;
+        background-color: #5e6eff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #3649fb;
+        }
+      }
+    }
+  }
+}
+
+//edit button
+button.edit {
+  background-color: #9cff83;
+  &:hover {
+    background-color: #62e741;
+  }
+}
+//delete button
+button.del {
+  background-color: #ef8686;
+  color: white;
+  &:hover {
+    background-color: #f64545;
+  }
+}
+//go top button
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 5;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  &:hover {
+    background-color: #ffc569;
+  }
+}
+
+.action {
+  color: yellow;
+}
+
+@media screen and (max-width: 811px) {
+  header {
+    div.logo {
+      flex: 1 1 700px;
+      img {
+        width: 15vw;
+        height: 15vw;
+      }
+    }
+    div.search {
+      flex: 1 1 700px;
+      form {
+        button {
+          img {
+            width: 3vw;
+            height: 3vw;
+          }
+        }
+      }
+    }
+    nav {
+      ul {
+        width: 80%;
+      }
+    }
+  }
+  main {
+    section.left {
+      img {
+        width: 35vw;
+        height: 45vw;
+        margin: 25px 0px 0px 30px;
+      }
+    }
+    section.right {
+      margin: 0px 0px 10px 21px;
+      div {
+        table {
+          tr {
+            td {
+              button {
+                width: 4vw;
+                height: 3vw;
+              }
+            }
+          }
+        }
+      }
+      form {
+        input[type="submit"] {
+          width: 4vw;
+          height: 3vw;
+        }
+        button.reset {
+          width: 4vw;
+          height: 3vw;
+        }
+      }
+    }
+    section.bottom {
+      margin: 0px 20px 0px 10px;
+      height: 50vw;
+      div.head {
+        height: 37%;
+        flex-direction: column;
+        form {
+          width: 100%;
+          height: 70%;
+          input[type="submit"] {
+            width: 4vw;
+            height: 3vw;
+            margin: 5px 0px 0px 337px;
+          }
+        }
+      }
+      div {
+        table {
+          tr {
+            td {
+              padding: 8px;
+              button.edit {
+                width: 4vw;
+                height: 3vw;
+              }
+              button.del {
+                width: 4vw;
+                height: 3vw;
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+      }
+      div.addArticle {
+        button.addArticleButton {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  header {
+    height: 25vh;
+    div.logo {
+      img {
+        margin: 0rem;
+      }
+    }
+    div.search {
+      margin: 0px;
+      form {
+        button {
+          img {
+            width: 6vw;
+            height: 6vw;
+            margin: 0px;
+          }
+        }
+      }
+    }
+    nav {
+      min-height: 40%;
+      ul {
+        justify-content: center;
+        li {
+          margin: 2px 60px;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.left {
+      height: 90vw;
+      div {
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      img {
+        width: 40vw;
+        height: 55vw;
+        margin: 50px 15px 0px 5px;
+      }
+    }
+    section.right {
+      height: 100vw;
+      margin-right: 20px;
+      div {
+        table {
+          tr {
+            td {
+              height: 25.5vw;
+              button.edit {
+                width: 10vw;
+                height: 5vw;
+              }
+              button.del {
+                width: 10vw;
+                height: 5vw;
+              }
+            }
+          }
+        }
+      }
+      form {
+        input[type="submit"] {
+          width: 10vw;
+          height: 5vw;
+        }
+        button.reset {
+          width: 10vw;
+          height: 5vw;
+        }
+      }
+    }
+    section.bottom {
+      height: 50vh;
+      max-width: 89%;
+      margin: 0px 0px 20px 21px;
+      div.head {
+        height: 35vw;
+        padding: 10px;
+        form {
+          input[type="submit"] {
+            margin: 1px;
+            width: 8vw;
+            height: 5vw;
+          }
+        }
+      }
+      div {
+        table {
+          tr {
+            td {
+              padding-left: 7px;
+              button.edit {
+                width: 10vw;
+                height: 5vw;
+              }
+              button.del {
+                width: 10vw;
+                height: 5vw;
+              }
+            }
+          }
+        }
+      }
+      div.addArticle {
+        height: 10vw;
+        button.addArticleButton {
+          height: 5vw;
+          width: 45%;
+        }
+      }
+    }
+  }
+  #myBtn {
+    padding: 7px;
+    font-size: 0.8rem;
+  }
+}
